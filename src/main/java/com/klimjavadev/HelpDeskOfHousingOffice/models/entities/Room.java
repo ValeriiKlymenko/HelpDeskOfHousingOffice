@@ -18,7 +18,7 @@ public class Room {
     private long id;
 
     @NotBlank(message = "The 'roomNumber' cannot be empty")
-    @Column(name = "roomNumber", nullable = false, unique = true)
+    @Column(name = "room_number", nullable = false, unique = true)
     private int roomNumber;
 
     @ManyToOne

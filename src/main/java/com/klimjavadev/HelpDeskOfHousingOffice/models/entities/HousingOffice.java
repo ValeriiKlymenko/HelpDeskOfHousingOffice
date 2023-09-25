@@ -10,15 +10,14 @@ import java.util.List;
 @Entity
 @Data
 @NoArgsConstructor
-@Table(name = "housingOffices")
+@Table(name = "housing_offices")
 public class HousingOffice {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Pattern(regexp = "[A-Z][a-z]+",
-            message = "Must start with a capital letter followed by one or more lowercase letters")
+//    @Pattern(regexp = "[A-Z][a-z]+", message = "Must start with a capital letter followed by one or more lowercase letters")
     @Column(name = "name", nullable = false)
     private String name;
 

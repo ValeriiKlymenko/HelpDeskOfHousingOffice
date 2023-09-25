@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.File;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -21,14 +22,15 @@ public class Request {
     private Long id;
 
     @Pattern(regexp = "[A-Z][a-z]+", message = "Must start with a capital letter followed by one or more lowercase letters")
-    @Column(name = "description", nullable = true)//(null)
+    @Column(name = "description", nullable = false)//(null)
     private String description;
 
-    @Column(name = "filePhoto", nullable = true)//(null)
-    private File filePhoto;
+//    @Lob
+//    @Column(name = "filePhoto")
+//    private byte[] filePhoto;
 
-    @Column(name = "dataCreated", nullable = true)//(now)
-    private Date dataCreated;
+    @Column(name = "data_created", nullable = false)
+    private LocalDateTime dataCreated;
 
     @Column(name = "status")
     @Enumerated(EnumType.STRING)

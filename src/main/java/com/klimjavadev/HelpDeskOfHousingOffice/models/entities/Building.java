@@ -26,7 +26,7 @@ public class Building {
     private Address address;
 
     @ManyToOne
-    @JoinColumn(name = "housingOffice_id")
+    @JoinColumn(name = "housing_offices_id")
     private HousingOffice housingOffice;
 
     @OneToMany(mappedBy = "building")

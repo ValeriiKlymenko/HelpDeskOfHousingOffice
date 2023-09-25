@@ -1,6 +1,8 @@
 package com.klimjavadev.HelpDeskOfHousingOffice.models.enums;
 
 public enum Task {
+    ONE,
+    TWO
 
 //    Прибирання прибудинкової території
 //

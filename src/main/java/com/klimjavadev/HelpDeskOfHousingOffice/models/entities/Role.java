@@ -20,7 +20,4 @@ public class Role {
     @NotBlank(message = "The 'name' cannot be empty")
     @Column(name = "name", nullable = false, unique = true)
     private String name;
-
-    @OneToMany(mappedBy = "role")
-    private List<User> users;
 }

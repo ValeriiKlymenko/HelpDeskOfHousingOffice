@@ -16,34 +16,29 @@ public class Address {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Pattern(regexp = "[A-Z][a-z]+",
-            message = "Must start with a capital letter followed by one or more lowercase letters")
+//    @Pattern(regexp = "[A-Z][a-z]+", message = "Must start with a capital letter followed by one or more lowercase letters")
     @Column(name = "country", nullable = false)
     private String country;
 
-    @Pattern(regexp = "[A-Z][a-z]+",
-            message = "Must start with a capital letter followed by one or more lowercase letters")
+//    @Pattern(regexp = "[A-Z][a-z]+", message = "Must start with a capital letter followed by one or more lowercase letters")
     @Column(name = "city", nullable = false)
     private String city;
 
-    @Pattern(regexp = "[A-Z][a-z]+",
-            message = "Must start with a capital letter followed by one or more lowercase letters")
+//    @Pattern(regexp = "[A-Z][a-z]+", message = "Must start with a capital letter followed by one or more lowercase letters")
     @Column(name = "oblast", nullable = false)
     private String oblast;
 
-    @Pattern(regexp = "[A-Z][a-z]+",
-            message = "Must start with a capital letter followed by one or more lowercase letters")
+//    @Pattern(regexp = "[A-Z][a-z]+ [A-Z][a-z]+", message = "Must start with a capital letter followed by one or more lowercase letters")
     @Column(name = "region", nullable = false)
     private String region;
 
-    @Pattern(regexp = "[A-Z][a-z]+",
-            message = "Must start with a capital letter followed by one or more lowercase letters")
+//    @Pattern(regexp = "[A-Z][a-zA-Z\\s]+", message = "Must start with a capital letter followed by one or more lowercase letters")
     @Column(name = "street", nullable = false)
     private String street;
 
     @NotBlank(message = "The 'houseNumber' cannot be empty")
-    @Column(name = "houseNumber", nullable = false, unique = true)
-    private int houseNumber;
+    @Column(name = "house", nullable = false, unique = true)
+    private int house;
 
     @NotBlank(message = "The 'zipcode' cannot be empty")
     @Column(name = "zipcode", nullable = false, unique = true)

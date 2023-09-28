@@ -7,9 +7,7 @@ import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.File;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @Entity
 @Data
